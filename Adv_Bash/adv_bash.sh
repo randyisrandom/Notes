@@ -107,64 +107,126 @@ EX=$CMMAOP' links together arithmetic operators but returns last one'
 
 
 LCNVRSN=${SCarray2[1]}
+EX=$
 ESCPE=${SCarray2[2]}
+EX=$
 PSPRTR=${SCarray2[3]}
+EX=$
 CSBSTTN=${SCarray2[4]}
+EX=$
 NLLC=${SCarray2[5]}
+EX=$
 WLDCRDASTRK=${SCarray2[6]}
+EX=$
 ARITHOP=${SCarray2[7]}
+EX=$
 TSTOOP=${SCarray2[8]}
+EX=$
 WLDCRD=${SCarray2[9]}
+EX=$
 VARSUB=${SCarray2[10]}
+EX=$
 EOL=${SCarray2[11]}
+EX=$
 
 PRMSUB=${SCarray3[1]}
+EX=$
 QTDSTREXPAN=${SCarray3[2]}
+EX=$
 PSTNLPARAM1=${SCarray3[3]}
+EX=$
 PSTNLPARAM2=${SCarray3[4]}
+EX=$
 EXITSTATVAR=${SCarray3[5]}
+EX=$
 pidVAR=${SCarray3[6]}
+EX=$
 CMNDGRP=${SCarray3[7]}
+EX=$
 BRCEEXPAN=${SCarray3[8]}
+EX=$
 EXTENDED=${SCarray3[9]}
+EX=$
 BOC=${SCarray3[10]}
+EX=$
 PLCHLD=${SCarray3[11]}
-
+EX=$
 PTHNME=${SCarray4[1]}
+EX=$
 TST1=${SCarray4[2]}
+EX=$
 TST2=${SCarray4[3]}
+EX=$
 ARRYELMNT=${SCarray4[4]}
+EX=$
 RNGEOFCHAR=${SCarray4[5]}
+EX=$
 INTEXPAN=${SCarray4[6]}
+EX=$
 REDIR1=${SCarray4[7]}
+EX=$
 REDIR2=${SCarray4[8]}
+EX=$
 REDIR3=${SCarray4[9]}
+EX=$
 REDIR4=${SCarray4[10]}
+EX=$
 REDIR5=${SCarray4[11]}
+EX=$
 REDIR6=${SCarray4[12]}
+EX=$
 
 REDIRHERE=${SCarray5[1]}
+EX=$
 REDIRSTR=${SCarray5[2]}
+EX=$
 ASCIIcomp=${SCarray5[3]}
+EX=$
 WRDBND=${SCarray5[4]}
+EX=$
 PIPE=${SCarray5[5]}
+EX=$
 FRCEREDIR=${SCarray5[6]}
+EX=$
 OR=${SCarray5[7]}
+EX=$
 BCKGRNDRUN=${SCarray5[8]}
+EX=$
 AND=${SCarray5[9]}
+EX=$
 OP=${SCarray5[10]}
+EX=$
 MINUS=${SCarray5[11]}
+EX=$
 
 EQ=${SCarray6[1]}
+EX=$
 PLUS=${SCarray6[2]}
+EX=$
 OP=${SCarray6[3]}
+EX=$
 MOD=${SCarray6[4]}
+EX=$
 HME=${SCarray6[5]}
+EX=$
 CWD=${SCarray6[6]}
+EX=$
 PREVDIR=${SCarray6[7]}
+EX=$PREVDIR" prints old working directory same as $OLDPWD"
 REGEXMTCH=${SCarray6[8]}
+EX=$REGEXMTCH" is used for pattern matching BASH RE's"
+echo '[[$var =~ ^pattern]] -> true if $var starts with pattern'\n;
+echo 'grep -E '^pattern''
+
 BOL=${SCarray6[9]}
+EX=$BOL" matches the beginning of a line in BASH and grep regular expressions"
+# grep '^pattern' file.txt
+
 UPPRCSE=${SCarray6[10]}
+EX="$UPPRCSE converts whole variable or first character to upper case"
+VAR="hello world";
+echo ${VAR^^} # HELLO WORLD
+
 CTRLCHAR=${SCarray6[11]}
   A=$CTRLCHAR'a '
   B=$CTRLCHAR'b '

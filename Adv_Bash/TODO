@@ -1,0 +1,6 @@
+Create local opam switch with latest ocaml version to be use on both fedora linux and mac
+
+#% opam switch --help
+#% opam switch create latest 
+
+Using json to capture environment data
