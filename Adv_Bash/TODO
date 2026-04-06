@@ -1,3 +1,6 @@
+Goals:
+Create a holistic project that introduces and ultimately simplifies the understanding and use of computer operating systems.
+
 Create local opam switch with latest ocaml version to be use on both fedora linux and mac
 
 #% opam switch --help

@@ -2,10 +2,20 @@
 ######################################################################
 # https://git-scm.com/                                               #
 ######################################################################
+echo "The only way to learn git is by use and integratiion within"\n;
+echo " your workkflow and suplemented with intellectual recursions"
 
 #Understanding the data models
-
 GitObj=("Blob" "Tree" "Commit")
+
+cat gitADT.ml
+#  With a structured and algorithmic understanding of the data model  
+#   we now possess the foundation for understanding how git 
+#   and her subcommands function.
+
+#SHA-1 Hash
+
+#Staging
 
 
 #
@@ -22,18 +32,23 @@ SNAPSHOT="The state of repository at the time of a commit"
 HISTORY="A DAG of snapshots recursive history of historys"
 REP="A repository is a tree and revison history"
 REMOTEREF=""\n
-OBJarr=("blobs" "trees" "graphs" "tags")
-OBJdag=()
 
 #leaky cli and its ds foundation#
 
-#  With a structured and algorithmic understanding of the 
-# data model we now possess the foundation for understanding 
-# how git and her subcommands function.
-#every git command is an interaction with the DAG
+
+# Just as every opam command manipulates or presents information or states about the unix-like directory tree 
+# the git commands manipulate or presents inforamation and states about the commit DAG
+
 
 BASICCMNDS1=("git help" "git status" "git log" "git log -all --graph --decorate" "")
-BASICCMNDS2=()
+#PORCELAIN
+POR1=(ADD AM ARCHIVE BACKFILL BISECT)
+POR2=(BUNDLE CHECKOUT CPICK CITOOL CLEAN)
+POR3=(CLONE COMMIT DESC DIFF FETCH)
+POR4=()
+POR5=()
+#ANCILLARY
+#LOW LEVEL COMMANDS
 
 NEWCOMMIT=("git init" "git commit" "git revert")
 
@@ -43,10 +58,14 @@ MUTATION=("git rebase")
 
 ADVNCDCMMNDS=()
 
+#DEEP DIVE INTO SHA-1 AND ITS PECULIAR USE IN ORGANIZING GIT REPOS
+
 #staging area 
 
 #protocols 
-
+SSH 
+HTTPS 
+GIT 
 #commands specific to github
 
 #and to gitlab

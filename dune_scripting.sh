@@ -34,8 +34,8 @@ echo "dune utop"
 
 echo "commands not frequently used" 
 
-echo "cache"
-echo "cache trim"
+echo "dune cache"
+echo "dunce cache trim"
 echo "cache size"
 echo "dune coq"
 echo "dune coq top"

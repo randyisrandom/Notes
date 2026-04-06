@@ -1,3 +1,15 @@
+#! usr/bin/env bash 
+
+echo 'run: xdg-open ~/Bibliotechum/"Research Papers"/2026-package-calculus.pdf'
+
+#opam has a data model similar to a unix tree with .opam as the root directory.
+#config a plaintext file
+# ~/.opam/download-cache
+
+# ~/.opam/repo
+# ~/.opam/{default,switch2,...} are directories
+
+
 Creating the opam switch a version package list pair assigned a string or path
 
 compiler version:5.50
@@ -6,8 +18,13 @@ compiler version:5.50
 
 #use --cli for all opam commands
 
-printf 'opam list [pkg]
-        opam install [pkg]
+# ~/.opam/opam-init contains scripts for intializing 
+
+#analyze .sh scripts complete init variables
+
+
+echo "Every command interacts with or presents information about the .opam directory"
+printf 'opam install [pkg]
         opam remove [pkg]
         opam update
         opam upgrade
@@ -20,20 +37,26 @@ printf 'scripts to'
 
 #not used often
 #in documentation istruction, mnemonic devices
-admin: for repo administration 
-clean: clears caches from log
-config:mainly used internally
-env: prints shell variables to stdout
-exec: execute a command in proper opam environment
-help: alias for --help
-init: used to intitalize opam state, customize aspects of shell integration, update options
-lint: performs quality checks on definitions 
-lock: locks files of a package so exact build environments can be recovered 
-option: global and switch configuration options sets or updates given field 
-pin: local customization of packages in a given switch 
-reinstall: automates removal and installation
-repository: used to manage repositories
-show: display information block about a package
-source: retrieve source code for a given package 
-tree: draws dependency forest of installed packages
-var: display and update the value associated with a given variable
+ADM="admin: for repo administration" 
+CLN="clean: clears caches from log"
+CNFG="config:mainly used internally"
+ENV="env: prints shell variables to stdout"
+EXEC="exec: execute a command in proper opam environment"
+HELP="help: alias for --help"
+INIT="init: used to intitalize opam state, customize aspects of shell integration, update options"
+LINT="lint: performs quality checks on definitions"
+LIST="list: displays lists of packages"
+LOCK="lock: locks files of a package so exact build environments can be recovered" 
+OPT="option: global and switch configuration options sets or updates given field"
+PIN="pin: local customization of packages in a given switch"
+REINST="reinstall: automates removal and installation"
+REMOVE=""
+REPO="repository: used to manage repositories"
+SHOW="show: display information block about a package"
+SOURCE="source: retrieve source code for a given package" 
+TREE="tree: draws dependency forest of installed packages"
+VAR="var: display and update the value associated with a given variable"
+
+#cabal
+
+#lack of package mangagers in agda

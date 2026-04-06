@@ -10,7 +10,8 @@ IDM0 = $' looping, '
 #library
 LIB0 = 'D' 
 #toolchain
-
+Tool=$'awk sed'
+  ##### #####
 ######################################################################
 # Shell Programming 
 ######################################################################
@@ -59,6 +60,7 @@ EX1=$'Bash is invoked when shell manipulation, or basic automation \n
 ######################################################################
 # Special Characters 
 ######################################################################
+#https://tldp.org/LDP/abs/html/special-chars.html                    #
 #https://linuxhandbook.com/courses/bash-beginner/bash-arrays/        #
 declare -a SCarray1
 SCarray1=("#" ";" ";;" ";;&" ":&" "." "." "\"" "'" ",") # A Bash array
@@ -204,13 +206,15 @@ EX=$
 PLUS=${SCarray6[2]}
 EX=$
 OP=${SCarray6[3]}
-EX=$
+EX=$OP" enables options for various commands"
 MOD=${SCarray6[4]}
-EX=$
+EX=$MOD" remainder of an integer division"
+let "z=5%3";
+echo $z;
 HME=${SCarray6[5]}
-EX=$
+EX=$HME" the tilde represents home directory"
 CWD=${SCarray6[6]}
-EX=$
+EX=$CWD" corresponds to $PWD or pwd"
 PREVDIR=${SCarray6[7]}
 EX=$PREVDIR" prints old working directory same as $OLDPWD"
 REGEXMTCH=${SCarray6[8]}
@@ -221,39 +225,43 @@ echo 'grep -E '^pattern''
 BOL=${SCarray6[9]}
 EX=$BOL" matches the beginning of a line in BASH and grep regular expressions"
 # grep '^pattern' file.txt
+#λ α 03c9 <- u03b1  ω
 
 UPPRCSE=${SCarray6[10]}
 EX="$UPPRCSE converts whole variable or first character to upper case"
 VAR="hello world";
-echo ${VAR^^} # HELLO WORLD
+echo ${VAR^^}\n; # HELLO WORLD
 
+#useful with limited keyboards
+#emacs?
+echo "key bindings are limited in vs code terminals"\n;
 CTRLCHAR=${SCarray6[11]}
-  A=$CTRLCHAR'a '
-  B=$CTRLCHAR'b '
-  C=$CTRLCHAR'c '
-  D=$CTRLCHAR'd '
-  E=$CTRLCHAR'e '
-  F=$CTRLCHAR'f '
-  G=$CTRLCHAR'g '
-  H=$CTRLCHAR'h '
-  I=$CTRLCHAR'i '
-  J=$CTRLCHAR'j '
-  K=$CTRLCHAR'k '
-  L=$CTRLCHAR'l '
-  M=$CTRLCHAR'm '
-  N=$CTRLCHAR'n '
-  O=$CTRLCHAR'o '
-  P=$CTRLCHAR'p '
-  Q=$CTRLCHAR'q '
-  R=$CTRLCHAR'r '
-  S=$CTRLCHAR's '
-  T=$CTRLCHAR't '
-  U=$CTRLCHAR'u '
-  V=$CTRLCHAR'v '
-  W=$CTRLCHAR'w '
-  X=$CTRLCHAR'x '
-  Y=$CTRLCHAR'y '
-  Z=$CTRLCHAR'z '
+  A=$CTRLCHAR'a moves cursor to beginning of line'
+  B=$CTRLCHAR'b backspace, same effect as arrow key <'
+  C=$CTRLCHAR'c terminates a process like top, or an infinte loop'
+  D=$CTRLCHAR'd keybinding identical to /..$ exit'
+  E=$CTRLCHAR'e moves cursor to end of line'
+  F=$CTRLCHAR'f move cursor forward 1 char position '
+  G=$CTRLCHAR'g makes an "EOL beep sound"'
+  H=$CTRLCHAR'h destructive backspace, same as "Backspace" key'
+  I=$CTRLCHAR'i horizontal tab'
+  J=$CTRLCHAR'j newline'
+  K=$CTRLCHAR'k vertical tab key'
+  L=$CTRLCHAR'l clears the terminal screen'
+  M=$CTRLCHAR'm carriage return'
+  N=$CTRLCHAR'n erase history of last command'
+  O=$CTRLCHAR'o newline command'
+  P=$CTRLCHAR'p recalls last command used'
+  Q=$CTRLCHAR'q resume stdin in terminal'
+  R=$CTRLCHAR'r searches commands in history buffer'
+  S=$CTRLCHAR's freeze a stdin terminal'
+  T=$CTRLCHAR't revert postion to previous character'
+  U=$CTRLCHAR'u erase whole line of input'
+  V=$CTRLCHAR'v insert control characters in text'
+  W=$CTRLCHAR'w erases to first instance of whitespace'
+  X=$CTRLCHAR'x cuts highlighted text'
+  Y=$CTRLCHAR'y pastes back text'
+  Z=$CTRLCHAR'z pauses a foreground job'
 
 ######################################################################
 # Variables and Parameters 
@@ -269,6 +277,7 @@ CTRLCHAR=${SCarray6[11]}
 ######################################################################
 # More Variables
 ######################################################################
+
 ######################################################################
 # Manipulating Variables 
 ######################################################################
@@ -280,10 +289,15 @@ CTRLCHAR=${SCarray6[11]}
 ######################################################################
 # Exit & Status 
 ######################################################################
+#THE  THEORY OF BOOLEAN VALUES IN BASH
 
 ######################################################################
 # Test
 ######################################################################
+#1 if ... then 
+#2 []
+#3 [[]]
+#4 ((..)) let... 
 ######################################################################
 # Loops & Branches
 ######################################################################
