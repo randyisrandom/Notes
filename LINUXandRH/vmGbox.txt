@@ -1,0 +1,9 @@
+Gnome box is intalled by default on fedora 
+a easy to use virtulatization environment
+
+understanding the data model and function vms and virtulatization
+virtualization of the various intricacies of the os 
+networking
+commands that interact with vm
+
+discernment and similarities with containerizations  

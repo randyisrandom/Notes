@@ -4,9 +4,10 @@
 #syntax
 STX0 = $' declaritive with imperative handling fetures'
 #semantics
-SEM0 = $'Weak Dynamic Type system'
+SEM0 = $'Weak Dynamic Type system strings and integers can be added'
 #idioms
-IDM0 = $' looping, '
+#https://style.ysap.sh/
+IDM0 = $' looping, conditionals'
 #library
 LIB0 = 'D' 
 #toolchain
@@ -64,12 +65,6 @@ EX1=$'Bash is invoked when shell manipulation, or basic automation \n
 #https://linuxhandbook.com/courses/bash-beginner/bash-arrays/        #
 declare -a SCarray1
 SCarray1=("#" ";" ";;" ";;&" ":&" "." "." "\"" "'" ",") # A Bash array
-SCarray2=(",, ," "\\" "/" "\`" ":" "!" "*" "*" "?" "$" "$")
-SCarray3=("${}" "$'...'" "\$*" "\$@" "\$?" "\$$" "()" "{,,}" "{..}" "{}" "{}")
-SCarray4=("{}\;" "[]" "[[]]" "[]" "$[...]" "(())" ">" "&>" ">>" "<" "<>" ">&")
-SCarray5=("<<" "<<<" "<,>" "\<,\>" "|" ">|" "||" "&" "&&" "-" "-")
-SCarray6=("=" "+" "+" "%" "~" "~+" "~-" "=~" "^" "^,^^" "Ctrl-")
-
 Comment=${SCarray1[1]}
 Ex=$Comment' a nonexecutable statement that can be imbedded in pipes'
 echo ${Ex}
@@ -107,7 +102,7 @@ EX=$FQTE' perserves all special chars in string $FQTE'
 CMMAOP=${SCarray1[10]}
 EX=$CMMAOP' links together arithmetic operators but returns last one'
 
-
+SCarray2=(",, ," "\\" "/" "\`" ":" "!" "*" "*" "?" "$" "$")
 LCNVRSN=${SCarray2[1]}
 EX=$
 ESCPE=${SCarray2[2]}
@@ -130,7 +125,7 @@ VARSUB=${SCarray2[10]}
 EX=$
 EOL=${SCarray2[11]}
 EX=$
-
+SCarray3=("${}" "$'...'" "\$*" "\$@" "\$?" "\$$" "()" "{,,}" "{..}" "{}" "{}")
 PRMSUB=${SCarray3[1]}
 EX=$
 QTDSTREXPAN=${SCarray3[2]}
@@ -153,6 +148,7 @@ BOC=${SCarray3[10]}
 EX=$
 PLCHLD=${SCarray3[11]}
 EX=$
+SCarray4=("{}\;" "[]" "[[]]" "[]" "$[...]" "(())" ">" "&>" ">>" "<" "<>" ">&")
 PTHNME=${SCarray4[1]}
 EX=$
 TST1=${SCarray4[2]}
@@ -177,6 +173,7 @@ REDIR5=${SCarray4[11]}
 EX=$
 REDIR6=${SCarray4[12]}
 EX=$
+SCarray5=("<<" "<<<" "<,>" "\<,\>" "|" ">|" "||" "&" "&&" "-" "-")
 
 REDIRHERE=${SCarray5[1]}
 EX=$
@@ -200,6 +197,8 @@ OP=${SCarray5[10]}
 EX=$
 MINUS=${SCarray5[11]}
 EX=$
+
+SCarray6=("=" "+" "+" "%" "~" "~+" "~-" "=~" "^" "^,^^" "Ctrl-")
 
 EQ=${SCarray6[1]}
 EX=$
@@ -266,46 +265,130 @@ CTRLCHAR=${SCarray6[11]}
 ######################################################################
 # Variables and Parameters 
 ######################################################################
+echo "Variables!!";
+echo "A label representing a set of locations in memory";
+echo '= dereferences a variable allowing its value to be used'\n;
+a=1
+b="$a + 1"
+echo ${b}
+# 2
 
-######################################################################
-# Internal Commands
-######################################################################
+# R=$() assigns output of command as variable
+R=$(cat exe.txt)
 
-######################################################################
-# Variables and Parameters
-######################################################################
-######################################################################
-# More Variables
-######################################################################
+#LOCAL VARIABLES
 
-######################################################################
-# Manipulating Variables 
-######################################################################
+#are variables local to a function
+echo -e \
+"BEST PRACTICES\n"\
+"              TYPE HERE \n"\
+
+
+#ENVIRONMENTAL VARIABLES
+echo -e \
+"BEST PRACTICES\n"\
+"              TYPE HERE \n"\
+#POSITIONAL PARAMETERS
+
+#unique variables that allow for user input at command line
+echo -e \
+"BEST PRACTICES\n"\
+"              TYPE HERE \n"\
+#SHIFT COMMAND
+
+# decrements the value of a positional parameter
 
 ######################################################################
 # Quoting 
 ######################################################################
+#ESCAPING
+printf "used with echo and sed"\n;
+
+ESCCHAR=('\n' '\r' '\t' '\v' '\b' '\a' '0xx')
 
 ######################################################################
 # Exit & Status 
 ######################################################################
-#THE  THEORY OF BOOLEAN VALUES IN BASH
+# THE  THEORY OF BOOLEAN VALUES IN BASH
+#because bash lacks boolean types
+
+# ! negates a conditional
+! true;
+echo "last exit status is $?";
+# last exit status is 1 
 
 ######################################################################
 # Test
 ######################################################################
-#1 if ... then 
-#2 []
-#3 [[]]
-#4 ((..)) let... 
+#1 if ... then ... else ... fi
+if [-z "$var"]; then echo "file dosen't exist"; else echo "file exists" fi
+#         elif ... else ... fi
+#2 [$v1 -c $v2] same as, test -c $v1 $v2
+# test -c ..$v1.. ..$v2.. 
+#3 [[]] extended test operator
+# features support for regex matching and additional operators
+# as well as type safety and greater flexiblity with quoteing 
+echo -e \
+"Understanding [[...]] as a Superclass of [...]\n"\
+"  [...] is reserved for older versions of bash \n"\
+"  the modern option features a greater variety of expression\n"\
+"and supersedes test"
+# [..] is reserved for older version hence test in not equivalent to [[]]
+#4 ((..)) let... are used to perform arithmetic comparisons
+echo -e \
+"integer expressions are in chapter so skip back and forth from here.*\n"\
+"    ((...)) allows for variables to be assigned as integer expresions\n"\;
+
+#                       FILE TEST OPERATORS                          #
+#         !NOTE! I should review how arrays are used                 #
+#https://www.thelinuxvault.net/blog/how-to-use-bash-array-in-a-shell-script/#practical-use-cases#
+FTST1=("e" "a" "f" "s" "d")
+FTST2=("p" "c" "p" "h" "L")
+FTST3=("S" "t" "r" "w" "x")
+FTST4=("g" "u" "k" "O" "G")
+FTST5=("N" "f1 -nt f2" "f1 -ot f2" "f1 -ef f2" "!")
+
+#INTEGER COMPARISON#
+ZTST1=("eq" "ne" "gt" "ge" "lt" "le")
+#operate on []"$a" -op "$b"]
+ZTST2=("<" "<=" ">" ">=")
+#operate on (("$a" -op "$b"))
+#STRING COMPARISON#
+STST=("=" "==" "!=" "<" ">" "z" "n")
+#COMPOUND COMPARISON#
+echo -e "can be used to compound comparison for multiple conditions\n"\
+"  useful for establishing conditions for multiple (general)files  \n"\
+"     -a : used as exp1 -a exp2          \n"\
+"represents the logical and similar to &&\n"\
+"     -o : used as exp1 -o exp 2         \n"\
+"represents the logical or similar to || \n"
+
+#syntactic equivalence of nested if then and && comparison operator  #
+
+#testing of test
+######################################################################
+# OPERATORS
+######################################################################
+
+######################################################################
+# VARIABLES REVISITED
+######################################################################
+
+######################################################################
+# VARIABLES MANIPULATED 
+######################################################################
+
 ######################################################################
 # Loops & Branches
 ######################################################################
+for do loop different than c
 
 ######################################################################
-# Operations
+# COMMAND SUBSTITUTION
 ######################################################################
 
 ######################################################################
-# Arithemetic 
+# Arithemetic Expansion
 ######################################################################
+
+#COMMANDS: INTERWEAVE ALL CONCEPTS IN THE BOOK#

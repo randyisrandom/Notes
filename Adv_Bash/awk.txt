@@ -1,0 +1,7 @@
+syntax
+semantics 
+idioms how local OSS dev community uses it
+    #questions:
+        1.
+libraries 
+tools shell integration
