@@ -1,9 +1,15 @@
 Gnome box is intalled by default on fedora 
-a easy to use virtulatization environment
+a easy to use virtulatization environment.
+
+RHEL Environment needed 
+Simulation with Gnome box 
 
 understanding the data model and function vms and virtulatization
 virtualization of the various intricacies of the os 
 networking
 commands that interact with vm
+
+2GB RAM (4GB with GUI)
+20GB Disk Space
 
 discernment and similarities with containerizations  

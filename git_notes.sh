@@ -62,10 +62,10 @@ ADVNCDCMMNDS=()
 
 #staging area 
 
-#protocols 
-SSH 
-HTTPS 
-GIT 
+#protocols: a set of communication rules
+SSH=""
+HTTPS="" 
+GIT=""
 #commands specific to github
 
 #and to gitlab

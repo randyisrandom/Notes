@@ -54,7 +54,8 @@ LINT="lint: performs quality checks on definitions"
 LIST="list: displays lists of packages"
 #practice control based on package information as a paramter
 # that is conditional, loops, amd commands.
-LOCK="lock: locks files of a package so exact build environments can be recovered" 
+LOCK="lock: locks files of a package so exact build environments can be recovered"
+#how are packages stored in .opam? 
 OPT="option: global and switch configuration options sets or updates given field"
 PIN="pin: local customization of packages in a given switch"
 REINST="reinstall: automates removal and installation"
@@ -62,8 +63,11 @@ REINST="reinstall: automates removal and installation"
 REMOVE="remove: removes installed package"
 REPO="repository: used to manage repositories"
 SHOW="show: display information block about a package"
+#redirect opam show ... $FOO | grep ... 
 SOURCE="source: retrieve source code for a given package" 
+#comapre with git clone!
 TREE="tree: draws dependency forest of installed packages"
+#sending tree data to stdin
 VAR="var: display and update the value associated with a given variable"
 
 # 3rd party commands that can be used within scripts 

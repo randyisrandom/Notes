@@ -2,21 +2,21 @@
 #                     https://tldp.org/LDP/abs/html/                 #
 
 #syntax
-STX0 = $' declaritive with imperative handling fetures'
+STX0=$' declaritive with imperative handling fetures'
 #semantics
-SEM0 = $'Weak Dynamic Type system strings and integers can be added'
+SEM0=$'Weak Dynamic Type system strings and integers can be added'
 #idioms
 #https://style.ysap.sh/
-IDM0 = $' looping, conditionals'
+IDM0=$'testing, looping, conditionals'
 #library
-LIB0 = 'D' 
+LIB0='Very limited modular support natively' 
 #toolchain
-Tool=$'awk sed'
+TOOL=$'awk, sed, data serialization'
   ##### #####
 ######################################################################
 # Shell Programming 
 ######################################################################
-STR0 = $'When to not use shell programming: $\n' 
+STR0=$'When to not use shell programming: $\n' 
   A=$'Resource intensive tasks\n'
   C=$'Math intensive operations\n'
   D=$'Cross platform\n'
@@ -392,3 +392,34 @@ for do loop different than c
 ######################################################################
 
 #COMMANDS: INTERWEAVE ALL CONCEPTS IN THE BOOK#
+#Internal Commands#
+
+#flags can change either the nature of the input or the output
+
+IC=(read echo printf)
+
+echo "reads the value of a variable from the stdin"
+#variables client defined at runtime unlike, unlike positional parameters $N.
+echo "prints expression or variable to stdout, only one flag -n"
+#expression & variables definition 
+echo "highly standardized consistent, handles formating and parameters differently"
+echo "printf format arguments"
+
+echo "changes directory, flags affect symbolic linked input and exit status"
+echo "identical to \$PWD, but flags also manage symbolic links"
+
+echo "commands manage interaction with a pushdown stack of directory names"
+echo "-n -N +N"
+echo "displays contents of the stack, flags either clear the stack or alter output format"
+
+echo "dynamic command execution by evaluating arguments twice"
+
+echo "set is rather complicated"
+
+echo "nullifies a variable or with commands functions and variable references"
+
+echo "exports variables and functions to child process"
+
+echo "declare weak type setting via flags"
+
+echo ""
